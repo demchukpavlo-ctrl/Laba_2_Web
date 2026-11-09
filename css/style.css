@@ -1,0 +1,460 @@
+/*
+   Лабораторна робота №2. CSS. Варіант 4.
+   Автор: Демчук Павло
+   Єдина таблиця стилів для сторінок index.html, company.html, news.html
+  
+
+@charset "utf-8";
+
+/*  1. Селектори тегів */
+
+html {
+  direction: ltr;                     /* direction: ltr */
+  unicode-bidi: normal;               /* unicode-bidi: normal */
+}
+
+body {
+  margin: 0;                          /* margin: <розмір> */
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;                   /* line-height: <число> */
+  color: #222222;                     /* color: <колір> */
+  background-color: #eef3f8;          /* background-color: <колір> */
+  background-image: url("../images/pattern.svg");   /* background-image: <uri> */
+  background-attachment: scroll;      /* background-attachment: scroll */
+  background-position: 0 0;           /* background-position: <розмір> {1,2} */
+}
+
+h1, h2, h3, h4 {
+  line-height: normal;                /* line-height: normal */
+  color: #0b5394;
+}
+
+p {
+  margin: 0 0 12px 0;                 /* margin: <розмір> */
+}
+
+pre {
+  max-height: 120px;                  /* max-height: <розмір> */
+  overflow: hidden;                   /* overflow: hidden */
+  padding: 8px;                       /* padding: <розмір> */
+  background-color: #f4f4f4;
+  border-style: groove;               /* border-style: groove */
+  border-width: 3px;
+  border-color: #cccccc;
+}
+
+address {
+  font-style: normal;
+  unicode-bidi: embed;                /* unicode-bidi: embed */
+}
+
+hr {
+  height: 0;
+  border-style: none;                 /* border-style: none */
+  border-top-style: double;           /* border-top-style: double */
+  border-top-width: thick;            /* border-top-width: thick */
+  border-top-color: #0b5394;
+  margin: 2% 0;                       /* margin: <процент> */
+}
+
+sup {
+  vertical-align: super;              /* vertical-align: super */
+  font-size: 70%;
+}
+
+sub {
+  vertical-align: -20%;               /* vertical-align: <процент> */
+  font-size: 70%;
+}
+
+ins {
+  background-color: #d4f8d4;
+  text-decoration: none;
+}
+
+/* 2. Селектори ідентифікаторів (сторінки) */
+
+#page-author  { background-color: #eaf6ff; }
+#page-company { background-color: #fff8e6; }
+#page-news    { background-color: #f0fff0; }
+
+#hot {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+#company-name {
+  font-style: normal;
+  font-weight: bold;
+  color: #0b5394;
+}
+
+/*  3. Контейнери та вкладеність блоків  */
+
+.wrapper {
+  max-width: 960px;                   /* max-width */
+  margin: 0 auto;
+  padding: 16px;
+  position: static;                   /* position: static */
+  z-index: auto;                      /* z-index: auto */
+}
+
+.page-header {
+  position: relative;                 /* контейнер для absolute-елементів */
+  min-height: 80px;                   /* min-height: <розмір> */
+  padding-top: 12px;                  /* padding-top: <розмір> */
+  padding-bottom: 12px;               /* padding-bottom: <розмір> */
+  background-image: url("../images/chip.svg");
+  background-repeat: no-repeat;
+  background-position: right;         /* background-position: right */
+  border-bottom-style: groove;        /* border-bottom-style: groove */
+  border-bottom-width: 4px;
+  border-bottom-color: #9fc5e8;       /* border-bottom-color: <колір> */
+}
+
+/* декоративний логотип, обрізаний clip */
+.page-header .logo {
+  position: absolute;                 /* position: absolute */
+  bottom: 14px;
+  right: 72px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #9fc5e8;
+  clip: rect(0px, 140px, 32px, 0px);  /* clip: rect(<top>,<right>,<bottom>,<left>) */
+}
+
+.page-header h1,
+.page-header h2 {
+  padding-right: 150px;
+}
+
+.content {
+  margin-top: 16px;                   /* margin-top: <розмір> */
+  min-height: 50%;                    /* min-height: <процент> */
+  overflow: visible;                  /* overflow: visible */
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 12px 16px;
+  margin-top: 2%;                     /* margin-top: <процент> */
+  border-style: outset;               /* border-style: outset */
+  border-width: 2px;
+  border-color: #dde6ef;
+}
+
+/* Плаваючі колонки (сторінка новин) */
+.main-column {
+  float: left;                        /* float: left */
+  width: 70%;                         /* width */
+  margin-right: 2%;                   /* margin-right: <процент> */
+}
+
+.side-column {
+  float: right;                       /* float: right */
+  width: 26%;
+}
+
+.clearfix,
+.site-footer {
+  clear: both;                        /* clear: both */
+}
+
+/*  4. Навігація */
+
+.top-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.top-nav li {
+  display: inline;                    /* display: inline */
+  margin-right: 12px;                 /* margin-right: <розмір> */
+}
+
+.top-nav img {
+  vertical-align: text-top;           /* vertical-align: text-top */
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Псевдоклас :link та :hover, :focus */
+a:link {
+  color: #0b5394;
+}
+
+a:visited {
+  color: #5b3c99;
+}
+
+a:hover {
+  color: #cc0000;
+  text-decoration: none;
+}
+
+a:focus,
+area:focus {
+  outline-style: dotted;
+  outline-width: 2px;                 /* outline-width */
+  outline-color: #f1c232;             /* outline-color */
+}
+
+/*  5. Селектори дітей (дочірній)  */
+
+.side-column > p {
+  display: list-item;                 /* display: list-item */
+  list-style-type: square;
+  margin-left: 20px;
+  text-indent: 0 !important;
+}
+
+.content > section > h2 {
+  border-left-style: solid;
+  border-left-width: thick;           /* border-left-width: thick */
+  border-left-color: #0b5394;         /* border-left-color: <колір> */
+  padding: 0 0 0 10px;
+}
+
+/*  6. Контекстні селектори (спадкоємців)  */
+
+.news-item h3 {
+  margin-top: 0;
+  font-size: 1.05em;
+}
+
+.news-item {
+  position: relative;
+  overflow: hidden;
+  margin: 12px 0;
+  padding: 8px 12px;
+  border-style: none;
+  border-left-style: solid;
+  border-left-width: thin;            /* border-left-width: thin */
+  border-left-color: #1c7ed6;
+  border-right-style: solid;
+  border-right-width: thin;           /* border-right-width: thin */
+  border-right-color: #1c7ed6;        /* border-right-color: <колір> */
+  border-bottom-style: none;          /* border-bottom-style: none */
+  border-top-style: none;             /* border-top-style: none */
+}
+
+.news-item.main-news {
+  border-left-width: thick;
+  border-right-width: thick;          /* border-right-width: thick */
+}
+
+.side-column h3 {
+  border-top-style: groove;           /* border-top-style: groove */
+  border-top-width: thin;             /* border-top-width: thin */
+  border-top-color: #1c7ed6;
+  padding-top: 6px;
+}
+
+.content blockquote q {
+  font-style: italic;
+  color: #0b5394;
+}
+
+/*  7. Псевдокласи :first-child, :first-of-type  */
+
+.news-item:first-child {
+  background-color: #f6fbff;
+}
+
+.card p:first-of-type {
+  text-indent: 2em;
+}
+
+/*  8. Псевдоелементи ::first-line, ::before  */
+
+.intro::first-line {
+  font-weight: bold;
+  color: #0b5394;
+}
+
+.news-item h3::before {
+  content: "\25B6\00A0";              /* трикутник перед заголовком новини */
+  color: #1c7ed6;
+}
+
+.site-footer::before {
+  content: "Контакти автора";
+  display: block;                     /* display: block */
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/*  9. Селектори атрибутів  */
+
+/* [attr] */
+abbr[title] {
+  text-decoration: none;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  cursor: help;
+}
+
+/* [attr*=value] — посилання на e-mail */
+a[href*="mailto"] {
+  font-weight: bold;
+  padding: 0 4px;
+  background-color: #fff2cc;
+}
+
+/* [attr|=value] — елементи англійською мовою */
+[lang|="en"] {
+  font-family: "Courier New", Courier, monospace;
+  color: #6a329f;
+}
+
+/*  10. Таблиця (display: table-*)  */
+
+table {
+  border-collapse: collapse;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+caption {
+  font-weight: bold;
+  padding-bottom: 6px;
+}
+
+thead {
+  display: table-header-group;        /* display: table-header-group */
+  background-color: #ffe9a8;
+}
+
+tbody {
+  display: table-row-group;           /* display: table-row-group */
+}
+
+col {
+  display: table-column;              /* display: table-column */
+}
+
+col.col-name {
+  background-color: #fffdf5;
+}
+
+th, td {
+  padding: 6px;
+  vertical-align: baseline;           /* vertical-align: baseline */
+  border-style: double;               /* border-style: double */
+  border-width: 3px;
+  border-color: #e0c060;
+}
+
+thead th {
+  border-bottom-style: double;        /* border-bottom-style: double */
+}
+
+tr.reserved {
+  visibility: collapse;               /* visibility: collapse */
+}
+
+tr.available {
+  visibility: visible;                /* visibility: visible */
+}
+
+/*  11. Форма (:disabled, :in-range, :focus)  */
+
+.order-form fieldset {
+  border-style: groove;
+  border-width: 2px;
+  border-color: #e0c060;
+  padding: 8px 16px 16px;
+}
+
+.order-form label {
+  display: block;
+  margin-top: 8px;
+}
+
+.order-form input,
+.order-form select,
+.order-form button {
+  padding: 4px 6px;
+  font-size: 1em;
+}
+
+.order-form input:focus,
+.order-form select:focus {
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: #1c7ed6;
+}
+
+.order-form input:in-range {
+  background-color: #e6ffe6;
+}
+
+.order-form input:out-of-range {
+  background-color: #ffe6e6;
+}
+
+.order-form button {
+  margin-top: 12px;
+  border-style: outset;
+  border-width: 2px;
+}
+
+.order-form button:disabled {
+  color: #999999;
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+
+/*  12. Окремі класи сторінки автора  */
+
+.welcome {
+  text-align: center;
+}
+
+.signature {
+  text-align: right;
+  font-style: italic;
+}
+
+.section-title {
+  color: #444444;
+  border-bottom-style: outset;        /* border-bottom-style: outset */
+  border-bottom-width: 2px;
+  border-bottom-color: #9fc5e8;
+}
+
+.author-name,
+.firm-name {
+  color: #0b5394;
+}
+
+.text {
+  text-align: justify;
+}
+
+/*  13. Підвал  */
+
+.site-footer {
+  margin-top: 16px;
+  padding-top: 8px;
+  max-height: none;                   /* max-height: none */
+  background-image: url("../images/chip.svg");
+  background-repeat: no-repeat;
+  background-position: 98% 50%;       /* background-position: <процент> {1,2} */
+  border-top-style: outset;           /* border-top-style: outset */
+  border-top-width: thin;
+  border-top-color: #999999;
+  border-bottom-style: none;
+  color: #333333 !important;          /* !important */
+  float: none;
+  clear: both;
+}
+
+.site-footer .copyright {
+  float: none;
+  clear: none;                        /* clear: none */
+}

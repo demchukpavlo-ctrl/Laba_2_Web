@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Author" content="Демчук Павло">
+<meta name="Description" content="Загальна інформація про вигадану фірму TechNode (комп'ютерні аксесуари)">
+<meta name="Keywords" content="TechNode, комп'ютерні аксесуари, процесори, монітори, вінчестери">
+<title>Про компанію TechNode</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body id="page-company">
+
+<div class="wrapper">
+
+  <header class="page-header">
+    <span class="logo">TechNode</span>
+    <nav class="top-nav">
+      <img src="images/banner.svg" alt="Навігація по сайту" width="600" height="100"
+           usemap="#navmap" title="Навігаційний банер">
+      <map name="navmap">
+        <area shape="rect" coords="0,0,199,99" href="index.html" alt="Про автора">
+        <area shape="rect" coords="200,0,399,99" href="company.html" alt="Про компанію">
+        <area shape="rect" coords="400,0,599,99" href="news.html" alt="Новини">
+      </map>
+    </nav>
+    <h1>Про компанію TechNode</h1>
+  </header>
+
+  <main class="content">
+
+    <section class="card">
+      <h2>Загальна інформація</h2>
+      <div class="text-block">
+        <p class="intro">
+          <em title="Назва компанії" id="company-name">TechNode</em> — вигадана українська компанія
+          (<abbr lang="uk" class="abbr" title="Товариство з обмеженою відповідальністю">ТОВ</abbr>),
+          що спеціалізується на продажу
+          <dfn lang="uk" class="term">комп'ютерних аксесуарів</dfn> — додаткових пристроїв і комплектуючих,
+          які розширюють можливості персонального комп'ютера.
+        </p>
+        <p>
+          Наш асортимент складається з трьох основних груп товарів: процесорів, моніторів та вінчестерів.
+          Інформація про товари зібрана з
+          <cite id="catalog-source" title="Внутрішній каталог компанії">Каталогу комплектуючих TechNode, 2026</cite>.
+        </p>
+        <blockquote>
+          Девіз компанії:
+          <q dir="ltr" title="Девіз TechNode">Якісні комплектуючі — надійна робота</q>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Асортимент</h2>
+      <table>
+        <caption>Основні групи товарів</caption>
+        <colgroup>
+          <col class="col-name">
+          <col>
+          <col>
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Товар</th>
+            <th>Тип</th>
+            <th>Виробник</th>
+            <th>Характеристика</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="available">
+            <td rowspan="2">Процесор</td>
+            <td>Core i5-12400F</td>
+            <td>Intel</td>
+            <td>Тактова частота: 2,5 <abbr lang="uk" title="гігагерц">ГГц</abbr></td>
+          </tr>
+          <tr>
+            <td>Ryzen 5 5600</td>
+            <td>AMD</td>
+            <td>Тактова частота: 3,5 <abbr lang="uk" title="гігагерц">ГГц</abbr></td>
+          </tr>
+          <tr>
+            <td rowspan="2">Монітор</td>
+            <td>IPS, 24″</td>
+            <td>LG</td>
+            <td>Частота: 75 <abbr lang="uk" title="герц">Гц</abbr></td>
+          </tr>
+          <tr>
+            <td>VA, 27″</td>
+            <td>Samsung</td>
+            <td>Частота: 144 <abbr lang="uk" title="герц">Гц</abbr></td>
+          </tr>
+          <tr>
+            <td rowspan="2">Вінчестер</td>
+            <td>HDD 3,5″</td>
+            <td>Seagate</td>
+            <td>Об'єм: 2 <abbr lang="uk" title="терабайт">ТБ</abbr></td>
+          </tr>
+          <tr>
+            <td><abbr lang="en" title="Solid State Drive">SSD</abbr> NVMe</td>
+            <td>Kingston</td>
+            <td>Об'єм: 512 <abbr lang="uk" title="гігабайт">ГБ</abbr></td>
+          </tr>
+          <tr class="reserved">
+            <td>Відеокарта</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Очікується надходження</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Графік роботи</h2>
+<pre dir="ltr">
+Пн – Пт    09:00 – 18:00
+Сб         10:00 – 15:00
+Нд         вихідний
+</pre>
+    </section>
+
+    <section class="card">
+      <h2>Швидке замовлення</h2>
+      <form class="order-form" action="#" onsubmit="return false;">
+        <fieldset>
+          <legend>Підбір товару</legend>
+          <div class="form-row">
+            <label for="product">Група товарів:</label>
+            <select id="product" name="product">
+              <option>Процесор</option>
+              <option>Монітор</option>
+              <option>Вінчестер</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="qty">Кількість (від 1 до 10):</label>
+            <input type="number" id="qty" name="qty" min="1" max="10" value="1">
+          </div>
+          <div class="form-row">
+            <button type="submit" disabled>Оформити замовлення (тимчасово недоступно)</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Контакти</h2>
+      <address dir="ltr">
+        Поштова адреса: 58000, м. Чернівці, вул. Навчальна, 16<br>
+        Телефон: (0372) 00-00-00<br>
+        Електронна пошта: <a href="mailto:info@technode.example">info@technode.example</a>
+      </address>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="copyright">&copy; 2026 TechNode</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

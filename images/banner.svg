@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="100" viewBox="0 0 600 100" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">
+  <rect x="0" y="0" width="200" height="100" fill="#0b5394"/>
+  <rect x="200" y="0" width="200" height="100" fill="#1c7ed6"/>
+  <rect x="400" y="0" width="200" height="100" fill="#3b9cf0"/>
+  <g fill="#ffffff">
+    <text x="100" y="58">Про автора</text>
+    <text x="300" y="58">Про компанію</text>
+    <text x="500" y="58">Новини</text>
+  </g>
+</svg>
